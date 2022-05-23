@@ -5,14 +5,17 @@ for_window [app_id="firefox"] focus
 assign [class="firefox"] 2
 for_window [class="firefox"] focus
 
-assign [app_id=thunar] 3
-for_window [app_id=thunar] focus
+# assign [app_id=thunar] 3
+# for_window [app_id=thunar] focus
 
-assign [class="Telegram"] 4
-for_window [class="Telegram"] focus
+assign [class="Signal"] 8
+for_window [class="Signal"] focus
 
+assign [class="Element"] 9
+for_window [class="Element"] focus
+assign [class="discord"] 9
 
-for_window [app_id="xed"] focus
+assign [class="Bitwarden"] 10
 
 
 # set floating (nontiling)for apps needing it:
@@ -27,6 +30,9 @@ for_window [class="qt5ct" instance="qt5ct"] floating enable, resize set width 60
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [app_id="pamac-manager"] floating enable, resize set width 80 ppt height 70 ppt
 for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
+for_window [app_id="thunar" instance="floating"] floating enable
+for_window [class="SpeedCrunch"] floating enable
+# for_window [role="floating"] floating enable
 
 # set floating for window roles
 for_window [window_role="pop-up"] floating enable

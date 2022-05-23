@@ -56,8 +56,8 @@ Arc-Dark Color Scheme
     background: transparent;
     color: #bebebe;
     background-color: @base1;
-    font-family: UbuntuMono;
-    font-size: 14px;
+    font-family: MesloLGS NF Regular;
+    font-size: 15px;
 }
 
 /* Every modules */
@@ -150,7 +150,8 @@ Arc-Dark Color Scheme
 }
 
 #pulseaudio.muted {
-    color: @highlight;
+    background-color: #90b1b1;
+    color: #2a5c45;
 }
 
 #temperature.critical {
@@ -162,7 +163,7 @@ Arc-Dark Color Scheme
 }
 
 #workspaces {
-    font-size:13px;
+    font-size:15px;
 }
 
 #workspaces button {
@@ -197,4 +198,12 @@ Arc-Dark Color Scheme
 #backlight.icon {
     padding-right:1px;
     font-size: 13px;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px; 
+    min-width: 16px;
 }

@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulators
-set $term-float xfce4-terminal
+set $term-float kitty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -111,6 +111,23 @@ exec swayidle -w\
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
+    # Move focused container to workspace and follow
+    bindsym $mod+Control+1 move container to workspace number 1, workspace 1
+    bindsym $mod+Control+2 move container to workspace number 2, workspace 2
+    bindsym $mod+Control+3 move container to workspace number 3, workspace 3
+    bindsym $mod+Control+4 move container to workspace number 4, workspace 4
+    bindsym $mod+Control+5 move container to workspace number 5, workspace 5
+    bindsym $mod+Control+6 move container to workspace number 6, workspace 6
+    bindsym $mod+Control+7 move container to workspace number 7, workspace 7
+    bindsym $mod+Control+8 move container to workspace number 8, workspace 8
+    bindsym $mod+Control+9 move container to workspace number 9, workspace 9
+    bindsym $mod+Control+0 move container to workspace number 10, workspace 10
+
+    # Bring container to current workspace
+
+
+
+
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
@@ -182,9 +199,10 @@ bindsym $mod+r mode "resize"
 #
 # Volume
 #
-    bindsym --locked XF86AudioRaiseVolume exec pamixer -ui 2
-    bindsym --locked XF86AudioLowerVolume exec pamixer -ud 2
-    bindsym --locked XF86AudioMute exec pamixer -t
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +2%
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -2%
+    bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+    bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle
 #
 # Player
 #
@@ -196,12 +214,14 @@ bindsym $mod+r mode "resize"
 # Backlight
 #
     bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
-    bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
+    bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%
 #
 # App shortcuts
 #
     bindsym $mod+n exec thunar
+    # bindsym $mod+Shift+n exec thunar 
     bindsym $mod+o exec firefox
+    bindsym XF86Calculator exec speedcrunch
 #
 # Screenshots
 #

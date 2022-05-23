@@ -28,9 +28,9 @@ call plug#begin(stdpath('data') . 'vimplug')
     Plug 'vim-airline/vim-airline'    
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
-    Plug 'dracula/vim', { 'as': 'dracula' }
+    " Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 
-let g:dracula_colorterm = 0
-colorscheme dracula
+" let g:dracula_colorterm = 0
+" colorscheme dracula

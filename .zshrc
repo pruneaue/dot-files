@@ -33,11 +33,14 @@ alias .zsh="nvim ~/.zshrc"
 alias orph="paru -Qtdq | paru -Rns -"
 alias ocr="ocrmypdf"
 alias ta="task add"
+alias ts="task sync"
 alias td="task done"
 alias tde="task delete"
 alias tm="task modify"
 alias t="task"
-alias config="/usr/bin/git --git-dir=~/.git/ --work-tree=~"
+alias config="/usr/bin/git --git-dir=~/.dotfiles/ --work-tree=~"
+alias xdg="swayhide xdg-open"
+alias sh="swayhide"
 
 
 # configure key keybindings
