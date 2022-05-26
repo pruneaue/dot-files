@@ -13,8 +13,8 @@ input type:touchpad {
 # Read `man 5 sway-input` for more information about this section.
 #
 input type:keyboard {
-    xkb_layout us,ca
-    xkb_variant multi
+    xkb_layout us,ca(multix)
+    xkb_variant multix
     xkb_options grp:rctrl_toggle
 }
 
@@ -24,3 +24,6 @@ exec_always {
     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
     'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
 }
+
+
+
